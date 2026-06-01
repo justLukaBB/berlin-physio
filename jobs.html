@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jobs — Physiotherapie am Berliner Tor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,500;1,600&display=swap">
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .jobs-hero { padding: calc(var(--header-h) + 5rem) 0 4rem;
+      background: radial-gradient(70% 90% at 100% 0%, rgba(74,138,122,.08), transparent 60%), #fff;
+    }
+    .jobs-hero .container { max-width: 900px; }
+    .jobs-hero h1 { margin: 1rem 0 1.5rem; }
+    .perks { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 2rem 0 3rem; }
+    .perk { background: #fff; border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 1.5rem; }
+    .perk h3 { font-size: 1.05rem; margin-bottom: .5rem; }
+    .perk p { color: var(--muted); font-size: .9rem; line-height: 1.55; }
+    @media (max-width: 760px) { .perks { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<header class="site-header" id="header">
+  <div class="container nav">
+    <a href="index.html" class="brand">
+      <img src="images/logo.png" alt="Logo">
+      <span class="brand-text"><strong>Berliner Tor</strong><span>Physiotherapie · Wesel</span></span>
+    </a>
+    <a href="index.html" class="btn btn-ghost btn-sm">← Zur Startseite</a>
+  </div>
+</header>
+
+<section class="jobs-hero">
+  <div class="container">
+    <span class="eyebrow reveal">Jobs &amp; Karriere</span>
+    <h1 class="reveal" data-delay="1">Werden Sie Teil unseres <span class="accent-gradient">Teams</span>.</h1>
+    <p class="lead reveal" data-delay="2">Wir suchen Physiotherapeut:innen, die mit Leidenschaft behandeln — und ein Arbeitsumfeld zu schätzen wissen, das Zeit für den Menschen lässt.</p>
+
+    <div class="perks">
+      <div class="perk reveal">
+        <h3>Faire Behandlungszeiten</h3>
+        <p>Wir nehmen uns Zeit für Patient:innen. Keine 15-Minuten-Taktung.</p>
+      </div>
+      <div class="perk reveal" data-delay="1">
+        <h3>Fortbildung</h3>
+        <p>Manuelle Therapie, Osteopathie, MTT — wir unterstützen Ihre Weiterbildung.</p>
+      </div>
+      <div class="perk reveal" data-delay="2">
+        <h3>Modernes Team</h3>
+        <p>Über 14 Kolleg:innen, eigenes Trainingszentrum, helle Räume.</p>
+      </div>
+    </div>
+
+    <div class="reveal" data-delay="3">
+      <a href="mailto:info@physio-berlinertor.de?subject=Bewerbung" class="btn btn-primary">
+        Jetzt bewerben
+        <span class="arrow">→</span>
+      </a>
+      <a href="tel:+4928130023850" class="btn btn-ghost" style="margin-left: 8px;">02 81 · 300 23 85</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Physiotherapie am Berliner Tor · Wesel</span>
+      <div style="display: flex; gap: 1.5rem;">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="script.js"></script>
+</body>
+</html>

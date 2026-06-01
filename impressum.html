@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Impressum — Physiotherapie am Berliner Tor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,500;1,600&display=swap">
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .legal { padding-top: calc(var(--header-h) + 4rem); }
+    .legal .container { max-width: 760px; }
+    .legal h1 { margin-bottom: 2rem; }
+    .legal h2 { margin: 2.5rem 0 1rem; font-size: 1.5rem; }
+    .legal p, .legal address { margin-bottom: 1rem; color: var(--ink-2); font-style: normal; line-height: 1.7; }
+  </style>
+</head>
+<body>
+
+<header class="site-header" id="header">
+  <div class="container nav">
+    <a href="index.html" class="brand">
+      <img src="images/logo.png" alt="Logo">
+      <span class="brand-text"><strong>Berliner Tor</strong><span>Physiotherapie · Wesel</span></span>
+    </a>
+    <a href="index.html" class="btn btn-ghost btn-sm">← Zur Startseite</a>
+  </div>
+</header>
+
+<section class="legal">
+  <div class="container">
+    <span class="eyebrow">Rechtliches</span>
+    <h1>Impressum</h1>
+
+    <h2>Angaben gemäß § 5 TMG</h2>
+    <address>
+      Physiotherapie am Berliner Tor<br>
+      Berliner-Tor-Platz 8<br>
+      46483 Wesel
+    </address>
+
+    <h2>Kontakt</h2>
+    <p>
+      Telefon: 02 81 · 300 23 85<br>
+      Telefon: 02 81 · 300 23 86<br>
+      E-Mail: info@physio-berlinertor.de
+    </p>
+
+    <h2>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
+    <p>Praxisinhaber:in · Berliner-Tor-Platz 8 · 46483 Wesel</p>
+
+    <h2>Haftung für Inhalte</h2>
+    <p>Als Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen.</p>
+
+    <h2>Urheberrecht</h2>
+    <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Beiträge Dritter sind als solche gekennzeichnet.</p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Physiotherapie am Berliner Tor · Wesel</span>
+      <div style="display: flex; gap: 1.5rem;">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="script.js"></script>
+</body>
+</html>

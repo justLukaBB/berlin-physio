@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Datenschutz — Physiotherapie am Berliner Tor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,500;1,600&display=swap">
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .legal { padding-top: calc(var(--header-h) + 4rem); }
+    .legal .container { max-width: 760px; }
+    .legal h1 { margin-bottom: 2rem; }
+    .legal h2 { margin: 2.5rem 0 1rem; font-size: 1.5rem; }
+    .legal p { margin-bottom: 1rem; color: var(--ink-2); line-height: 1.7; }
+  </style>
+</head>
+<body>
+
+<header class="site-header" id="header">
+  <div class="container nav">
+    <a href="index.html" class="brand">
+      <img src="images/logo.png" alt="Logo">
+      <span class="brand-text"><strong>Berliner Tor</strong><span>Physiotherapie · Wesel</span></span>
+    </a>
+    <a href="index.html" class="btn btn-ghost btn-sm">← Zur Startseite</a>
+  </div>
+</header>
+
+<section class="legal">
+  <div class="container">
+    <span class="eyebrow">Rechtliches</span>
+    <h1>Datenschutzerklärung</h1>
+
+    <h2>1. Datenschutz auf einen Blick</h2>
+    <p>Diese Datenschutzerklärung klärt Sie über die Verarbeitung personenbezogener Daten auf unserer Website auf. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können.</p>
+
+    <h2>2. Verantwortliche Stelle</h2>
+    <p>
+      Physiotherapie am Berliner Tor<br>
+      Berliner-Tor-Platz 8 · 46483 Wesel<br>
+      Telefon: 02 81 · 300 23 85<br>
+      E-Mail: info@physio-berlinertor.de
+    </p>
+
+    <h2>3. Datenerfassung auf unserer Website</h2>
+    <p><strong>Server-Log-Dateien:</strong> Der Provider erhebt und speichert automatisch Informationen, die Ihr Browser übermittelt (Browsertyp, Betriebssystem, Referrer-URL, Hostname, Uhrzeit). Diese Daten sind nicht bestimmten Personen zuordenbar.</p>
+
+    <h2>4. Kontaktformular &amp; E-Mail-Kontakt</h2>
+    <p>Bei Kontaktaufnahme per E-Mail oder Telefon werden Ihre Angaben zur Bearbeitung der Anfrage gespeichert. Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO.</p>
+
+    <h2>5. Ihre Rechte</h2>
+    <p>Sie haben jederzeit das Recht auf Auskunft, Berichtigung, Löschung oder Einschränkung der Verarbeitung Ihrer personenbezogenen Daten, sowie ein Widerspruchsrecht und ein Recht auf Datenübertragbarkeit.</p>
+
+    <h2>6. Eingebettete Karten</h2>
+    <p>Wir binden auf der Kontaktseite eine Karte von OpenStreetMap ein. Beim Aufruf der Seite wird Ihre IP-Adresse an OpenStreetMap übertragen.</p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Physiotherapie am Berliner Tor · Wesel</span>
+      <div style="display: flex; gap: 1.5rem;">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="script.js"></script>
+</body>
+</html>
