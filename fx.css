@@ -1,0 +1,58 @@
+/* =========================================================================
+   FX – Premium-Animationen (zu style.css ergänzend geladen)
+   Akzent: Sage
+   ========================================================================= */
+:root{
+  --fx:    var(--sage, #4a8a7a);
+  --fx-2:  var(--sage-glow, #6db8a6);
+  --fx-glow: rgba(109, 184, 166, 0.55);
+}
+
+/* 1. Scroll-Fortschrittsbalken */
+.fx-progress{
+  position: fixed; top: 0; left: 0; height: 3px; width: 100%;
+  transform: scaleX(0); transform-origin: 0 50%;
+  background: linear-gradient(90deg, var(--fx), var(--fx-2));
+  box-shadow: 0 0 14px var(--fx-glow);
+  z-index: 9999; pointer-events: none; will-change: transform;
+}
+
+/* 2. Magnetische Buttons */
+.fx-magnetic{ transition: transform .45s cubic-bezier(.16, 1, .3, 1); will-change: transform; }
+
+/* 3. 3D-Tilt + Lichtspot */
+.fx-tilt{
+  position: relative; transform-style: preserve-3d; will-change: transform;
+  transition: transform .55s cubic-bezier(.16, 1, .3, 1), box-shadow .55s ease;
+}
+.fx-tilt.is-tilting{ transition: transform .14s ease-out; }
+.fx-tilt::after{
+  content: ""; position: absolute; inset: 0; border-radius: inherit; z-index: 3;
+  pointer-events: none; opacity: 0; transition: opacity .4s ease;
+  background: radial-gradient(340px circle at var(--fx-mx, 50%) var(--fx-my, 50%),
+              color-mix(in srgb, var(--fx) 20%, transparent), transparent 55%);
+}
+.fx-tilt.is-tilting::after{ opacity: 1; }
+
+/* 4. Gradient-Text-Shimmer */
+.accent-gradient{
+  background-size: 220% auto;
+  animation: fx-shimmer 6s ease-in-out infinite;
+}
+@keyframes fx-shimmer{
+  0%, 100% { background-position: 0% 50%; }
+  50%      { background-position: 100% 50%; }
+}
+
+/* 5. Parallax-Basis */
+.hero-visual, .highlight-visual, .about-visual, [data-fx-parallax]{ will-change: transform; }
+
+@media (max-width: 980px){
+  .fx-tilt::after{ display: none; }
+}
+@media (prefers-reduced-motion: reduce){
+  .fx-progress{ display: none; }
+  .fx-magnetic, .fx-tilt{ transform: none !important; transition: none; }
+  .fx-tilt::after{ display: none; }
+  .accent-gradient{ animation: none; }
+}
